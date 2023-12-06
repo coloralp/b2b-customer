@@ -1,0 +1,8 @@
+<?php
+
+return [
+    'ZIRAAT_URL' => env('ZIRAAT_URL'),
+    'ZIRAAT_INSTITUTION_CODE' => env('ZIRAAT_INSTITUTION_CODE'),
+    'ZIRAAT_PASSWORD' => env('ZIRAAT_PASSWORD'),
+    'ZIRAAT_ACCOUNT_NO'=> env('ZIRAAT_ACCOUNT_NO')
+];

@@ -1,0 +1,104 @@
+Ben create action olayını customize etmek istiyorum
+
+Şöyle 2 numaralı ürünü kişi mesela sepete ekledi  işte sepete = user_id = 5 ürün_id = 2 qty = 2 gibi bir şey oluştu
+
+sonra kişi gitti add e tıkladı crete forma gitiit tekrar eklerken 2 id li ürünü seçerse hata alıyorum çünkü ben sepeti
+
+$table->unique(['who','ürün_id']) indexini verdim create yerine upsert atması gerek
+
+Bunun için ya create formda sepetde olmayan ürünleri getirmesini sağlamam gerek ya da upsert yaptıramam lazım şuan create yaptığı için hata alıyorum
+
+
+
+----------------------------------------------------
+
+Ben bazı form elmentlerinin seçilmeden diğerlerine geçilmesine izin verilmesin istiyorum
+
+--------------------------------------------------------------------------------------------
+
+Actions\CreateAction ben bunun gibi bir action oluşturup bir şey olduğunda bu actionu tetikletebilir miiym
+
+----------------------
+
+Fİnish order butonu eğer yoksa hidden yap
+
+---
+
+Onaylanmamış siparişleri panelde göster
+
+
+---
+
+Eğer bir selcde hepsi gelmesin istiyorsan
+
+$searchable->getSearchResultsUsing(fn(string $search): array => Game::where('name', 'like', "%{$search}%")->getAvailAble()->limit(10)->pluck('name', 'id')->toArray())
+
+https://filamentphp.com/docs/3.x/forms/fields/select#customizing-the-relationship-query
+
+selectde labeli customize etmek istersen
+
+https://filamentphp.com/docs/3.x/forms/fields/select#customizing-the-relationship-option-labels
+
+
+-------
+
+Güzel bir yazı https://laraveldaily.com/post/filament-add-custom-button-form-reset-clear-fields
+
+------
+
+tabloda enumların labelllerini nasıl yazdıracağım
+---------------------------------------------------
+
+order oluşturulurken validasyon yap
+
+Order silerken tamamen silineceksen itemslarıda sil
+---------------------------
+
+https://laraveldaily.com/tip/filament-badge-columns-with-enums  enumları tabloya kaydederken
+
+------------------------------------
+
+Disable olna inputların değerlerini nasıl göndereceğim
+
+
+------------------------------------------
+
+Repeater de edit kapatmak istiyorsan form builder da repeaterdan sonra
+->hidden(function (string $operation) {
+                        return $operation == 'edit';
+                    })
+
+-----------------------------------------------------------------------
+
+acitivity log tarzı filament
+
+https://filamentphp.com/plugins/noxoua-activity-log
+
+-------------------------------------------------------------------
+giriş yaparken kullanıcının bir tane jarının olması zorunluluğunu kontrol et
+
+transaction requestler onaylanmış değilse düzenlenebilir
+
+----------------------
+
+https://filamentphp.com/docs/2.x/forms/fields#input-masking  masking
+
+--------------------------------------------------------------------
+
+Filter option datepicker https://laraveldaily.com/post/filament-date-picker-disable-dates-with-conditions
+
+--------------------------
+
+Order oluşturmadan önce onalanacak ve şuanki oluşturmaya çalıştığı order totoli hesaplanarak balance ile karşılaştıralacak duruma göre işlem yapılack
+
+Account sayfasına girince kendi bilgilerinin yüklenmesi sağlanılacak
+
+Accaunt bilgileri güncelleme işlemi gerçekleşecek
+
+--//Panel tarafına customerlerin panele girip kendi oluşturduğu orderlara listelenecek (filitrede customer seçilecek-tarih-amaoun miktarı max-min)
+
+--//Bunalrı onaylama aksiyonunun apisi yazılacak
+
+//transaction içinde foreach oluyor ve her foreach te event tetiklemem gerek bu forechlardam bir tanesi patlayınca diğer eventlar tetiklenmiş mi olacak
+
+

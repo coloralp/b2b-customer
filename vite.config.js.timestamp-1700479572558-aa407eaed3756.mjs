@@ -1,0 +1,18 @@
+// vite.config.js
+import { defineConfig } from "file:///C:/laragon/www/b2b-api-back/node_modules/vite/dist/node/index.js";
+import laravel, { refreshPaths } from "file:///C:/laragon/www/b2b-api-back/node_modules/laravel-vite-plugin/dist/index.mjs";
+var vite_config_default = defineConfig({
+  plugins: [
+    laravel({
+      input: ["resources/css/app.css", "resources/js/app.js"],
+      refresh: [
+        ...refreshPaths,
+        "app/Livewire/**"
+      ]
+    })
+  ]
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJDOlxcXFxsYXJhZ29uXFxcXHd3d1xcXFxiMmItYXBpLWJhY2tcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfZmlsZW5hbWUgPSBcIkM6XFxcXGxhcmFnb25cXFxcd3d3XFxcXGIyYi1hcGktYmFja1xcXFx2aXRlLmNvbmZpZy5qc1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9pbXBvcnRfbWV0YV91cmwgPSBcImZpbGU6Ly8vQzovbGFyYWdvbi93d3cvYjJiLWFwaS1iYWNrL3ZpdGUuY29uZmlnLmpzXCI7aW1wb3J0IHtkZWZpbmVDb25maWd9IGZyb20gJ3ZpdGUnO1xyXG5pbXBvcnQgbGFyYXZlbCwge3JlZnJlc2hQYXRoc30gZnJvbSAnbGFyYXZlbC12aXRlLXBsdWdpbidcclxuXHJcblxyXG5leHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoe1xyXG4gICAgcGx1Z2luczogW1xyXG4gICAgICAgIGxhcmF2ZWwoe1xyXG4gICAgICAgICAgICBpbnB1dDogWydyZXNvdXJjZXMvY3NzL2FwcC5jc3MnLCAncmVzb3VyY2VzL2pzL2FwcC5qcyddLFxyXG4gICAgICAgICAgICByZWZyZXNoOiBbXHJcbiAgICAgICAgICAgICAgICAuLi5yZWZyZXNoUGF0aHMsXHJcbiAgICAgICAgICAgICAgICAnYXBwL0xpdmV3aXJlLyoqJyxcclxuICAgICAgICAgICAgXSxcclxuICAgICAgICB9KSxcclxuICAgIF0sXHJcbn0pO1xyXG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQTJRLFNBQVEsb0JBQW1CO0FBQ3RTLE9BQU8sV0FBVSxvQkFBbUI7QUFHcEMsSUFBTyxzQkFBUSxhQUFhO0FBQUEsRUFDeEIsU0FBUztBQUFBLElBQ0wsUUFBUTtBQUFBLE1BQ0osT0FBTyxDQUFDLHlCQUF5QixxQkFBcUI7QUFBQSxNQUN0RCxTQUFTO0FBQUEsUUFDTCxHQUFHO0FBQUEsUUFDSDtBQUFBLE1BQ0o7QUFBQSxJQUNKLENBQUM7QUFBQSxFQUNMO0FBQ0osQ0FBQzsiLAogICJuYW1lcyI6IFtdCn0K
